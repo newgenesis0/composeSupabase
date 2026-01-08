@@ -50,7 +50,7 @@ services:
       # NEXT_ANALYTICS_BACKEND_PROVIDER: bigquery
 
   kong:
-    image: kong:2.8.1
+    image: kong:latest
     restart: unless-stopped
     volumes:
       # https://github.com/supabase/supabase/issues/12661
@@ -75,7 +75,7 @@ services:
       /docker-entrypoint.sh kong docker-start'
 
   auth:
-    image: supabase/gotrue:v2.172.1
+    image: supabase/gotrue:latest
     restart: unless-stopped
     healthcheck:
       test:
@@ -157,7 +157,7 @@ services:
       # GOTRUE_HOOK_SEND_EMAIL_SECRETS: "v1,whsec_VGhpcyBpcyBhbiBleGFtcGxlIG9mIGEgc2hvcnRlciBCYXNlNjQgc3RyaW5n"
 
   rest:
-    image: postgrest/postgrest:v12.2.12
+    image: postgrest/postgrest:latest
     restart: unless-stopped
     depends_on:
       db:

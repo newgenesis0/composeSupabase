@@ -224,6 +224,7 @@ services:
           hide_groups_header: true
           allow:
             - admin
+
   ## Block access to /api/mcp
   - name: mcp-blocker
     _comment: 'Block direct access to /api/mcp'
